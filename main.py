@@ -14,6 +14,7 @@ def sentiment_predict(new_sentence, vocab_size, max_len):
     # 알파벳과 숫자를 제외하고 모두 제거 및 알파벳 소문자화
     new_sentence = re.sub('[^0-9a-zA-Z ]', '', new_sentence).lower()
     encoded = []
+    
     word_to_index = imdb.get_word_index()
     # 띄어쓰기 단위 토큰화 후 정수 인코딩
     for word in new_sentence.split():
